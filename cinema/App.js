@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import 'react-native-get-random-values';
+// import 'react-native-get-random-values';
 import HomeScreen from "./src/screens/home_screen.js";
 
 const Stack = createNativeStackNavigator();
