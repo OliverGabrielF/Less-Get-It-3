@@ -41,3 +41,5 @@ const styles = StyleSheet.create({
     borderBottomColor: 'black',
   },
 })
+
+export default stylesæ
