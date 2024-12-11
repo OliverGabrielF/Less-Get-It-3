@@ -8,8 +8,8 @@ export default function HomeScreen({ }) {
 
   const { state, dispatch, checkAuthenticationStatus } = useAppState();
 
-  const username = 'Sirviking';
-  const password = 'Donkeykong01';
+  const username = 'your_username';
+  const password = 'your_password';
 
 
 
