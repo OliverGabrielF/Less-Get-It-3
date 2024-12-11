@@ -88,16 +88,6 @@ export const ContextProvider = ({ children }) => {
     // This interceptor intercepts all outgoing requests and adds
     // the API access token to them
 
-    instance.interceptors.request.use(function (config) {
-        if (state.token) {
-            config.headers['x-access-token'] = state.token;
-        }
-        return config;
-
-    }, function (error) {
-        return Promise.reject(error);
-    });
-
     return (
         <Context.Provider value={{ state, dispatch, authenticate, checkAuthenticationStatus }}>
             {children}

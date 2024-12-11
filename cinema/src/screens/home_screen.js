@@ -1,27 +1,38 @@
+import React, { useEffect } from 'react';
 import { Text, View, Button } from 'react-native';
-// import { MenuProvider } from 'react-native-popup-menu';
-import styles from '../styles/general_style.js';
+import { Provider, useSelector, useDispatch } from 'react-redux';
 
-import { useAppState } from '../../context';
+import styles from '../styles/general_style.js';
+import { checkAuthenticationStatus, fetchCinemas } from '../actions/cinemaActions.js';
 
 export default function HomeScreen({ }) {
 
-  const { state, dispatch, checkAuthenticationStatus } = useAppState();
+  const dispatch = useDispatch();
+  const { cinemas, token } = useSelector((state) => state.cinemas);
+
+  const handleLogin = () => {
+    dispatch(checkAuthenticationStatus(username, password));
+  };
+
+  useEffect(() => {
+    if (token) {
+      dispatch(fetchCinemas());
+    }
+  }, [token, dispatch]);
 
   const username = 'your_username';
   const password = 'your_password';
 
-
-
   return (
     <View>
       <View>
-        <Text>Lorem Ipsum</Text>
-        <Text>Lorem Ipsum</Text>
-        <Text>Lorem Ipsum</Text>
-        <Text>Lorem Ipsum</Text>
         <Text>There's a darkness inside of you</Text>
-        <Button onPress={() => checkAuthenticationStatus(username, password, dispatch)} title='Login test'/>
+        <Button onPress={handleLogin} title='Login test'/>
+        {cinemas.length > 0 && (
+          <View>
+            <Text>First Cinema: {cinemas[0].name}</Text>
+          </View>
+        )}
       </View>
     </View>
   );
