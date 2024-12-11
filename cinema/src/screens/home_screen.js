@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { Text, View, Button } from 'react-native';
-import { Provider, useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import styles from '../styles/general_style.js';
-import { checkAuthenticationStatus, fetchCinemas } from '../actions/cinemaActions.js';
+import { fetchCinemas } from '../actions/cinemasActions.js';
 
 export default function HomeScreen({ }) {
 
   const dispatch = useDispatch();
-  const { cinemas, token } = useSelector((state) => state.cinemas);
+  const { cinemas } = useSelector((state) => state.cinemas);
+  const { token } = useSelector((state) => state.authentication);
 
   useEffect(() => {
     if (token) {
@@ -22,7 +23,7 @@ export default function HomeScreen({ }) {
         <Text>There's a darkness inside of you</Text>
         {cinemas.length > 0 && (
           <View>
-            <Text>First Cinema: {cinemas[0].name}</Text>
+            <Text>First Cinema: {cinemas[0].website}</Text>
           </View>
         )}
       </View>

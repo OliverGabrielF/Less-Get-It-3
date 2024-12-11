@@ -10,11 +10,11 @@ import {
   Platform,
   ScrollView,
 } from 'react-native';
-import { Provider, useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import testImage from '../assets/test.jpg';
 import styles from '../styles/login_style.js';
-import { checkAuthenticationStatus } from '../actions/cinemaActions.js';
+import { checkAuthenticationStatus } from '../actions/authenticationActions.js';
 
 export default function LoginScreen({ navigation }) {
   const dispatch = useDispatch();

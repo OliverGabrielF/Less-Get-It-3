@@ -1,18 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import base64 from 'react-native-base64';
 
-import { setToken, setCinemas } from "../reducers/cinemasSlice.js";
-import axiosInstance from "../../axios";
-
-export const fetchCinemas = () => async (dispatch) => {
-    try {
-        const response = await axiosInstance.get('/theaters')
-        dispatch(setCinemas(response.data))
-        console.log("Successfully got cinemas");
-    } catch (error) {
-        console.error("Error getting cinemas: ", error);
-    }
-};
+import { setToken } from "../reducers/authenticationSlice.js";
+import axiosInstance from "../../axios.js";
 
 export const checkAuthenticationStatus = (username, password) => async (dispatch) => {
     try {
