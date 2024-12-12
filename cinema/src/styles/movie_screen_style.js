@@ -31,29 +31,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
   },
-  upcoming_button: {
-    height: 40,
-    width: 200,
-    backgroundColor: '#DAE2DF',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-    borderRadius: 10,
-  },
-  upcoming_button_text: {
-    width: 200,
-    textAlign: 'center',
-  },
-  container_cinema: {
-    width: '90%',
-    alignSelf: 'center',
-    marginTop: 30,
-    marginBottom: '40%',
-  },
-  scrollview: {
-    flex: 1,
-    width: '100%',
-  },
 })
 
 export default styles;

@@ -30,7 +30,7 @@ export default function HomeScreen({ navigation }) {
       {cinemas.length > 0 && (
 
       <ScrollView style={styles.scrollview}>
-        <View style={styles.container_contact}>
+        <View style={styles.container_cinema}>
 
           {cinemas
             .slice()
