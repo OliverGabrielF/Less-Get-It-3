@@ -31,14 +31,28 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
   },
-  image: {
-    height: '85%',
-    aspectRatio: 1,
-    marginTop: 10,
-    marginLeft: 10,
+  upcoming_button: {
+    height: 40,
+    width: 200,
+    backgroundColor: '#DAE2DF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
     borderRadius: 10,
-    borderBottomWidth: 2,
-    borderBottomColor: 'black',
+  },
+  upcoming_button_text: {
+    width: 200,
+    textAlign: 'center',
+  },
+  container_contact: {
+    width: '90%',
+    alignSelf: 'center',
+    marginTop: 30,
+    marginBottom: '40%',
+  },
+  scrollview: {
+    flex: 1,
+    width: '100%',
   },
 })
 

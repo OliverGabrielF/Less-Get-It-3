@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text, View, Button, ScrollView } from 'react-native';
+import { Text, View, Pressable, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import styles from '../styles/general_style.js';
@@ -24,15 +24,23 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.header_text}>Dr. Cinema</Text>
       </View> 
 
-      <Button onPress = {() => navigation.navigate("Upcoming")} title="UPCOMING MOVIES" />
+      <Pressable style={styles.upcoming_button} onPress = {() => navigation.navigate("Upcoming")}>
+        <Text style={styles.upcoming_button_text}>Upcoming Movies</Text>
+      </Pressable>
+      {cinemas.length > 0 && (
 
-      <View>
-        <Text>There's a darkness inside of you</Text>
-        {cinemas.length > 0 && (
+      <ScrollView style={styles.scrollview}>
+        <View style={styles.container_contact}>
 
-        <ScrollView style={styles.scrollview}>
-          <View style={styles.container_contact}>
-            {cinemas.map((cinema) => (
+          {cinemas
+            .slice()
+            // Comma ignoring sort due to data provided
+            .sort((a, b) => {
+              const nameA = a.name.replace(/,/g, '');
+              const nameB = b.name.replace(/,/g, '');
+              return nameA.localeCompare(nameB);
+            })
+            .map((cinema) => (
               <Cinema
                 key={cinema.id}
                 id={cinema.id}
@@ -45,11 +53,9 @@ export default function HomeScreen({ navigation }) {
                 navigation={navigation}
               />
             ))}
-          </View>
-        </ScrollView>
-
-        )}
-      </View>
+        </View>
+      </ScrollView>
+      )}
     </View>
   );
 }
