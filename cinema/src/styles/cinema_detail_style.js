@@ -40,9 +40,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   contact_info_container: {
-    marginTop: 8,
+    marginTop: 20,
     width: '90%',
-    height: '30%',
+    height: '40%',
     backgroundColor: 'white',
     borderRadius: 10,
     flexDirection: 'row',
@@ -73,13 +73,27 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   contact_text_name: {
-    fontSize: 30,
+    fontSize: 70,
     fontWeight: 'bold',
     textAlign: 'center',
     width: '90%',
     borderBottomColor: '#DAE2DF',
-
   },
+  movies_shown_text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'white',
+    marginTop: 30,
+    textAlign: 'left', // Align text to the left
+    borderBottomWidth: 4,
+    borderBottomColor: 'black', // Ensure a clear underline
+    alignSelf: 'flex-start', // Align the text to the left of the parent container
+    marginLeft: 20, // Add padding to the left for better spacing
+  },
+  movies_shown_container: {
+
+  }
+
 })
 
 export default styles;

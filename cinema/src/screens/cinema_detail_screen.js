@@ -37,7 +37,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
           <Text style={styles.contact_text}>{cinemas[0].website}</Text>
         </View>
       </View>
-      <View></View>
+      <Text style={styles.movies_shown_text}>Movies shown in {cinemas[0].name}</Text>
     </View>
   );
 }
