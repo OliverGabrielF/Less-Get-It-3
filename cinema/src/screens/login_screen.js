@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { useDispatch } from 'react-redux';
 
-import testImage from '../assets/test.jpg';
+import testImage from '../assets/mjess.png';
 import styles from '../styles/login_style.js';
 import { checkAuthenticationStatus } from '../actions/authenticationActions.js';
 
