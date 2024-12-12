@@ -42,12 +42,12 @@ const styles = StyleSheet.create({
   contact_info_container: {
     marginTop: 20,
     width: '90%',
-    height: '35%',
+    minHeight: 150,
     backgroundColor: 'white',
     borderRadius: 10,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    padding: 15,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
     shadowColor: '#000000',
     shadowOpacity: 0.2,
     shadowRadius: 8,
@@ -56,13 +56,14 @@ const styles = StyleSheet.create({
       height: 6,
     },
   },
+
   contact_text_container: {
-    flex: 1,
-    height: '100%',
-    alignItems: 'center',
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    marginTop: 10,
   },
+
   contact_text: {
     fontSize: 14,
     fontWeight: 'bold',
@@ -84,11 +85,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     marginTop: 30,
-    textAlign: 'left', // Align text to the left
+    textAlign: 'left',
     borderBottomWidth: 4,
-    borderBottomColor: 'black', // Ensure a clear underline
-    alignSelf: 'flex-start', // Align the text to the left of the parent container
-    marginLeft: 20, // Add padding to the left for better spacing
+    borderBottomColor: 'black',
+    alignSelf: 'flex-start',
+    marginLeft: 20,
   },
   movies_shown_container: {
 
