@@ -46,7 +46,7 @@ export default function LoginScreen({ navigation }) {
         keyboardShouldPersistTaps="handled"
       >
         <Image source={testImage} style={styles.image} />
-        <Text style={styles.title}>Toodler</Text>
+        <Text style={styles.title}>Dr.Cinema</Text>
         <View style={styles.inputView}>
           <TextInput
             style={styles.inputText}
