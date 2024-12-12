@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchCinemas } from '../actions/cinemasActions.js';
@@ -29,17 +29,18 @@ export default function CinemaDetailScreen({ navigation, route }) {
         <Text style={styles.header_text}>Dr. Cinema</Text>
       </View>
 
-
-      <View style={styles.contact_info_container}>
-        <View style={styles.contact_text_container}>
-          <Text style={styles.contact_text_name}>{cinema.name}</Text>
-          <Text style={styles.contact_text}>{cinema.description}</Text>
-          <Text style={styles.contact_text}>{cinema["address\t"]}</Text>
-          <Text style={styles.contact_text}>{cinema.phone}</Text>
-          <Text style={styles.contact_text}>{cinema.website}</Text>
+      <ScrollView style={styles.scrollview}>
+        <View style={styles.contact_info_container}>
+          <View style={styles.contact_text_container}>
+            <Text style={styles.contact_text_name}>{cinema.name}</Text>
+            <Text style={styles.contact_text}>{cinema.description}</Text>
+            <Text style={styles.contact_text}>{cinema["address\t"]}</Text>
+            <Text style={styles.contact_text}>{cinema.phone}</Text>
+            <Text style={styles.contact_text}>{cinema.website}</Text>
+          </View>
         </View>
-      </View>
-      <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
+        <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
+      </ScrollView>
     </View>
   );
 }

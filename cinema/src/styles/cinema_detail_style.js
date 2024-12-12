@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
   },
   contact_info_container: {
     marginTop: 20,
-    width: '90%',
-    minHeight: 150,
+    width: '95%',
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 15,
     flexDirection: 'column',
     justifyContent: 'flex-start',
+    alignSelf: 'center',
     shadowColor: '#000000',
     shadowOpacity: 0.2,
     shadowRadius: 8,
@@ -56,14 +56,12 @@ const styles = StyleSheet.create({
       height: 6,
     },
   },
-
   contact_text_container: {
     width: '100%',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
   },
-
   contact_text: {
     fontSize: 14,
     fontWeight: 'bold',
@@ -89,10 +87,14 @@ const styles = StyleSheet.create({
     borderBottomWidth: 4,
     borderBottomColor: 'black',
     alignSelf: 'flex-start',
-    marginLeft: 20,
+    marginLeft: 10,
   },
   movies_shown_container: {
 
+  },
+  scrollview: {
+    flex: 1,
+    width: '100%',
   }
 
 })
