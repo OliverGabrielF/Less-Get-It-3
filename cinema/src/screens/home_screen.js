@@ -19,7 +19,9 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View>
-      <View style={styles.header}/>
+      <View style={styles.header}>
+        <Text style={styles.header_text}>Dr.Cinema</Text>
+      </View>
       <View>
         <Text>There's a darkness inside of you</Text>
         {cinemas.length > 0 && (
