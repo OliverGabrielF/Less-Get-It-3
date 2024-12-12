@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   contact_info_container: {
     marginTop: 20,
     width: '90%',
-    height: '40%',
+    height: '35%',
     backgroundColor: 'white',
     borderRadius: 10,
     flexDirection: 'row',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   contact_text_name: {
-    fontSize: 70,
+    fontSize: 50,
     fontWeight: 'bold',
     textAlign: 'center',
     width: '90%',
