@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(function (config) {
 
     const state = store.getState();
-    const token = state.cinemas.token;
+    const token = state.authentication.token;
     console.log("Attempting to send a request with correct header: ", token);
 
     if (token) {
