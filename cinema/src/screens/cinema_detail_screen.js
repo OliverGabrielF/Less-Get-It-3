@@ -21,24 +21,23 @@ export default function CinemaDetailScreen({ navigation, route }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.header_text}>{cinemas[0].name}</Text>
-      </View>
-
-      {/* Back button to navigate back home */}
-      <View style={styles.back_home}>
         <TouchableOpacity style={styles.back_home} onPress={() => navigation.goBack("Home")}>
           <Text style={styles.buttonTxt}>{"< BACK"}</Text>
         </TouchableOpacity>
+        <Text style={styles.header_text}>Dr. Cinema</Text>
       </View>
+
 
       <View style={styles.contact_info_container}>
         <View style={styles.contact_text_container}>
+          <Text style={styles.contact_text_name}>{cinemas[0].name}</Text>
           <Text style={styles.contact_text}>{cinemas[0].description}</Text>
-          <Text style={styles.contact_text}>{cinemas[0].address}</Text>
+          <Text style={styles.contact_text}>{cinemas[0]["address\t"]}</Text>
           <Text style={styles.contact_text}>{cinemas[0].phone}</Text>
           <Text style={styles.contact_text}>{cinemas[0].website}</Text>
         </View>
       </View>
+      <View></View>
     </View>
   );
 }
