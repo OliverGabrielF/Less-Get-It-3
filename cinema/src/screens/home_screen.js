@@ -24,7 +24,7 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.header_text}>Dr. Cinema</Text>
       </View> 
 
-      <Button onPress = {() => navigation.navigate("Upcoming", { cinemaId: id })} title="UPCOMING MOVIES" />
+      <Button onPress = {() => navigation.navigate("Upcoming")} title="UPCOMING MOVIES" />
 
       <View>
         <Text>There's a darkness inside of you</Text>
