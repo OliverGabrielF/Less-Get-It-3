@@ -52,6 +52,16 @@ const styles = StyleSheet.create({
     fontSize: 14, 
     color: 'black' 
   },
+  container_upcoming: {
+    width: '90%',
+    alignSelf: 'center',
+    marginTop: 30,
+    marginBottom: '40%',
+  },
+  scrollview: {
+    flex: 1,
+    width: '100%',
+  },
 });
 
 export default styles;

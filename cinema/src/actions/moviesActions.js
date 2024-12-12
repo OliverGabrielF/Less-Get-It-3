@@ -1,7 +1,7 @@
-import { setMovies } from "../reducers/cinemasSlice.js";
+import { setMovies } from "../reducers/moviesSlice.js";
 import axiosInstance from "../../axios.js";
 
-export const fetchCinemas = () => async (dispatch) => {
+export const fetchMovies = () => async (dispatch) => {
     try {
         const response = await axiosInstance.get('/movies/')
         dispatch(setMovies(response.data))

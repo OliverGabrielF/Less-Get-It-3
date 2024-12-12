@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import { Text, TouchableOpacity, View, FlatList, Image } from 'react-native';
+import { Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+
+import Upcoming from '../components/upcoming.js';
 import { fetchUpcoming } from '../actions/upcomingActions.js';
 import styles from '../styles/upcoming_movies_style.js'; // Style imported from the style sheet
 
@@ -16,19 +18,7 @@ export default function UpcomingMoviesScreen({ navigation }) {
     }
   }, [token, dispatch]);
 
-  // Sort upcoming movies by release date in ascending order
-  const sortedMovies = upcoming.slice().sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
-
-  // Render a single movie item
-  const renderMovie = ({ item }) => (
-    <View style={styles.movieContainer}>
-      <Image source={{ uri: item.thumbnail }} style={styles.thumbnail} />
-      <View style={styles.details}>
-        <Text style={styles.movieName}>{item.name}</Text>
-        <Text style={styles.releaseDate}>Release Date: {item.releaseDate}</Text>
-      </View>
-    </View>
-  );
+  const sortedUpcoming = upcoming.slice().sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
 
   return (
     <View style={styles.container}>
@@ -38,12 +28,26 @@ export default function UpcomingMoviesScreen({ navigation }) {
         </TouchableOpacity>
         <Text style={styles.headerText}>Upcoming Movies</Text>
       </View>
-      <FlatList
-        data={sortedMovies}
-        renderItem={renderMovie}
-        keyExtractor={(item) => item.id.toString()}
-        contentContainerStyle={styles.list}
-      />
+
+      {upcoming.length > 0 && (
+
+      <ScrollView style={styles.scrollview}>
+        <View style={styles.container_upcoming}>
+
+          {sortedUpcoming.map((upcoming) => (
+              <Upcoming
+                key={upcoming.id}
+                id={upcoming.id}
+                name={upcoming.title}
+                thumbnail={upcoming.poster}
+                releaseDate={upcoming["release-dateIS"]}
+                navigation={navigation}
+              />
+            ))}
+        </View>
+      </ScrollView>
+      )}
+
     </View>
   );
 }
