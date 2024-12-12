@@ -50,9 +50,8 @@ export default function LoginScreen({ navigation }) {
         <View style={styles.inputView}>
           <TextInput
             style={styles.inputText}
-            secureTextEntry
             placeholder="Name"
-            placeholderTextColor="#fff"
+            placeholderTextColor="black"
             onChangeText={(text) => setState({ ...state, Name: text })}
           />
         </View>
@@ -61,7 +60,7 @@ export default function LoginScreen({ navigation }) {
             style={styles.inputText}
             secureTextEntry
             placeholder="Password"
-            placeholderTextColor="#fff"
+            placeholderTextColor="black"
             onChangeText={(text) => setState({ ...state, password: text })}
           />
         </View>
