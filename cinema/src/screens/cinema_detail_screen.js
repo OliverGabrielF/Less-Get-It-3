@@ -30,16 +30,21 @@ export default function CinemaDetailScreen({ navigation, route }) {
       </View>
 
       <ScrollView style={styles.scrollview}>
-        <View style={styles.contact_info_container}>
-          <View style={styles.contact_text_container}>
-            <Text style={styles.contact_text_name}>{cinema.name}</Text>
-            <Text style={styles.contact_text}>{cinema.description}</Text>
-            <Text style={styles.contact_text}>{cinema["address\t"]}</Text>
-            <Text style={styles.contact_text}>{cinema.phone}</Text>
-            <Text style={styles.contact_text}>{cinema.website}</Text>
+        <View style={styles.scrollview_container}>
+          <View style={styles.contact_info_container}>
+            <View style={styles.contact_text_container}>
+              <Text style={styles.contact_text_name}>{cinema.name}</Text>
+              <Text style={styles.contact_text}>{cinema.description}</Text>
+              <Text style={styles.contact_text}>{cinema["address\t"]}</Text>
+              <Text style={styles.contact_text}>{cinema.phone}</Text>
+              <Text style={styles.contact_text}>{cinema.website}</Text>
+            </View>
+          </View>
+          <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
+          <View style={styles.movies_shown_container}>
+            <Text>Hello</Text>
           </View>
         </View>
-        <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
       </ScrollView>
     </View>
   );

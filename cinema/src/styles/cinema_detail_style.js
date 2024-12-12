@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#454B66',
     alignItems: 'center',
     justifyContent: 'flex-start',
+
   },
   header: {
     height: 90,
@@ -13,7 +14,6 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'relative',
   },
   header_text: {
     fontSize: 20,
@@ -90,13 +90,22 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   movies_shown_container: {
-
+    backgroundColor: 'white',
+    width: '40%',
+    height: '20%',
+    borderRadius: '10%',
+    marginTop: '3%',
+    marginLeft: '4%',
+    // marginBottom: '40%',
+    // paddingBottom: '30%'
   },
   scrollview: {
     flex: 1,
     width: '100%',
+  },
+  scrollview_container: {
+    marginBottom: '60%'
   }
-
 })
 
 export default styles;
