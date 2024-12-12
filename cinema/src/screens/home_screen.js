@@ -18,7 +18,7 @@ export default function HomeScreen({ navigation }) {
   }, [token, dispatch]);
 
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.header_text}>Dr.Cinema</Text>
       </View>
