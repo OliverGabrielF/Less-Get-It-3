@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   actionButtonText: {
-    color: 'white',
+    color: 'black',
     fontSize: 12,
     textAlign: 'center',
   },

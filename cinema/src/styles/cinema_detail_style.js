@@ -3,13 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#cccccc',
+    backgroundColor: '#454B66',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   header: {
     height: 90,
-    backgroundColor: '#555555',
+    backgroundColor: '#DAE2DF',
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   header_text: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: 'white',
+    color: 'black',
     marginTop: 30,
   },
   back_home: {
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     left: 10,
     top: '50%',
     transform: [{ translateY: -10 }],
-    backgroundColor: '#555555',
+    backgroundColor: '#DAE2DF',
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderTopRightRadius: 10,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   buttonTxt: {
     alignText: 'center',
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold'
   },
   contact_info_container: {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     width: '90%',
     borderBottomWidth: 1,
-    borderBottomColor: '#555555',
+    borderBottomColor: '#DAE2DF',
     textAlign: 'left',
     marginTop: 10,
   },
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     width: '90%',
-    borderBottomColor: '#555555',
+    borderBottomColor: '#DAE2DF',
 
   },
 })
