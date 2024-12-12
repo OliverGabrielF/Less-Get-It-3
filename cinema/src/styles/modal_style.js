@@ -2,21 +2,21 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   actionButton: {
-    backgroundColor: 'navy',
+    backgroundColor: '#DAE2DF',
     borderRadius: 5,
     padding: 10,
     marginTop: 5,
     alignItems: 'center',
   },
   actionButtonText: {
-    color: 'white',
+    color: 'black',
     fontSize: 12,
     textAlign: 'center',
   },
   newTaskContainer: {
     marginTop: 20,
     padding: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '#DAE2DF',
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },

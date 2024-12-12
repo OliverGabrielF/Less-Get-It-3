@@ -3,13 +3,13 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#cccccc',
+    backgroundColor: '#454B66',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   header: {
     height: 90,
-    backgroundColor: '#555555',
+    backgroundColor: '#DAE2DF',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -18,10 +18,10 @@ const styles = StyleSheet.create({
     marginTop: 30,
     fontSize: 20,
     fontWeight: 'bold',
-    color: 'white',
+    color: 'black',
   },
   back_home: {
-    backgroundColor: '#555555',
+    backgroundColor: '#DAE2DF',
     marginBottom: 10,
     marginTop: 10,
     alignSelf: 'flex-start',
