@@ -3,13 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#454B66',
+    backgroundColor: '#cccccc',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   header: {
     height: 90,
-    backgroundColor: '#DAE2DF',
+    backgroundColor: '#555555',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -18,10 +18,10 @@ const styles = StyleSheet.create({
     marginTop: 30,
     fontSize: 20,
     fontWeight: 'bold',
-    color: 'black',
+    color: 'white',
   },
   back_home: {
-    backgroundColor: '#DAE2DF',
+    backgroundColor: '#555555',
     marginBottom: 10,
     marginTop: 10,
     alignSelf: 'flex-start',
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   buttonTxt: {
     alignText: 'center',
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold'
   },
   contact_info_container: {
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     width: '90%',
     borderBottomWidth: 1,
-    borderBottomColor: '#DAE2DF',
+    borderBottomColor: '#555555',
     textAlign: 'left',
     marginTop: 10,
   },
