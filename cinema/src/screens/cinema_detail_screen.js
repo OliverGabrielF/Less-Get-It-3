@@ -30,8 +30,6 @@ export default function CinemaDetailScreen({ navigation, route }) {
     movie.showtimes.some(showtime => showtime.cinema.id === cinemaId)
   );
 
-  console.log(movies_for_cinema);
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
