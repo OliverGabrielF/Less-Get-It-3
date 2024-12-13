@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
 
   },
-  contact_info_container: {
+  cinema_container: {
     marginTop: 20,
     width: '95%',
     backgroundColor: 'white',
@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
       height: 6,
     },
   },
-  contact_text_container: {
+  cinema_info_container: {
     width: '100%',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
   },
-  contact_text: {
+  cinema_info_text: {
     fontSize: 14,
     fontWeight: 'bold',
     width: '90%',
@@ -39,13 +39,37 @@ const styles = StyleSheet.create({
     borderBottomColor: '#DAE2DF',
     textAlign: 'left',
     marginTop: 10,
+    paddingTop: 2,
+    paddingBottom: 2
   },
-  contact_text_name: {
+  cinema_name: {
     fontSize: 50,
     fontWeight: 'bold',
     textAlign: 'center',
+    alignContent: 'center',
+    marginLeft: '3%',
     width: '90%',
     borderBottomColor: '#DAE2DF',
+  },
+  cinema_website: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    width: '90%',
+    borderBottomWidth: 1,
+    borderBottomColor: '#DAE2DF',
+    textAlign: 'left',
+    marginTop: 10,
+    color: 'blue'
+  },
+  cinema_phone_number: {
+    ontSize: 14,
+    fontWeight: 'bold',
+    width: '90%',
+    borderBottomWidth: 1,
+    borderBottomColor: '#DAE2DF',
+    textAlign: 'left',
+    marginTop: 10,
+    color: 'blue'
   },
   movies_shown_text: {
     fontSize: 20,
@@ -66,7 +90,7 @@ const styles = StyleSheet.create({
   },
   movies_shown_container: {
     flexDirection: 'row',
-    flexWrap: 'nowrap', 
+    flexWrap: 'nowrap',
     alignItems: 'left',
     justifyContent: 'flex-start',
     width: '100%',
