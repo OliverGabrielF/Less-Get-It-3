@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   pressable: {
     marginTop: '1%',
     flexBasis: '40%',
-    maxWidth: 400,
+    maxWidth: '40%',
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
@@ -23,10 +23,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   container: {
-    height: 250,
-    width: '100%',
+    height: 350,
+    width: 200,
     backgroundColor: '#DAE2DF',
-    alignItems: 'center',
     justifyContent: 'flex-start',
     borderRadius: 20,
     shadowColor: '#000000',
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 6 },
     elevation: 10,
-    padding: 10,
+    paddingBottom: 10,
   },
   name_container: {
     width: 160,
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
   },
   name: {
     marginTop: 10,
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
     color: '#555555',
     textAlign: 'center',
@@ -65,7 +64,6 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   genre: {
-    // marginTop: 2,
     fontSize: 14,
     color: '#555555',
     textAlign: 'center',

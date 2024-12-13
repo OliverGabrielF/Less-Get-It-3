@@ -96,12 +96,14 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   movies_shown_container: {
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'nowrap', 
     alignItems: 'center',
     justifyContent: 'flex-start',
+    width: '100%',
+    paddingRight: '20%',
     paddingHorizontal: 10,
-    overflow: 'hidden',
   },
   scrollview: {
     flex: 1,
@@ -115,6 +117,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     width: '100%',
+    height: '50%',
   },
 })
 
