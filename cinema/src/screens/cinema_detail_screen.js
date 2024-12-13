@@ -31,10 +31,27 @@ export default function CinemaDetailScreen({ navigation, route }) {
     movie.showtimes.some(showtime => showtime.cinema.id === cinemaId)
   );
 
-  // Function to strip the description of HTML tags in description of the API
-  function stripHtmlTags(text) {
-    if (!text) return '*No description found';
+  // Function to strip the description of HTML tags in description of the API for cinemas
+  function strip_html_tags(text) {
+    if (!text) return '*Engin lýsing';
     return text.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+  }
+
+  // Makes the phone number of cinema callable with a press
+  const call_contact = (phone_number) => {
+    if (!phone_number) return '*Ekkert símanúmer fannst';  //Skoða þetta aðeins
+    const phone_url = `tel:${phone_number}`;
+    return Linking.openURL(phone_url);
+  }
+
+  // Makes the website of cinema clickable 
+  const clickable_website = () => {
+    let url = cinema.website.startsWith('http')
+      ? cinema.website
+      : `https://${cinema.website}`;
+    Linking.openURL(url).catch((err) =>
+      console.error("Failed to open URL:", err)
+    );
   }
 
   return (
@@ -43,29 +60,25 @@ export default function CinemaDetailScreen({ navigation, route }) {
 
       <ScrollView style={styles.scrollview}>
         <View style={styles.scrollview_container}>
-          <View style={styles.contact_info_container}>
-            <View style={styles.contact_text_container}>
-              <Text style={styles.contact_text_name}>{cinema.name}</Text>
-              <Text style={styles.contact_text}>
-                {stripHtmlTags(cinema.description)
+          <View style={styles.cinema_container}>
+            <View style={styles.cinema_info_container}>
+              <Text style={styles.cinema_name}>{cinema.name}</Text>
+
+              {/* Using a function to strip the HTML tags in the description section */}
+              <Text style={styles.cinema_info_text}>
+                {strip_html_tags(cinema.description)
                   .split('\n')
                   .map((line, index) => (
                     <Text key={index} style={styles.contact_text}>
                       {line.trim()}
-                      {index < stripHtmlTags(cinema.description).split('\n').length - 1 && '\n'}
+                      {index < strip_html_tags(cinema.description).split('\n').length - 1 && '\n'}
                     </Text>
                   ))}
               </Text>
-              <Text style={styles.contact_text}>{cinema["address\t"]}, {cinema.city}</Text>
-              <Text style={styles.contact_text}>{cinema.phone}</Text>
-              <Text onPress={() => {
-                let url = cinema.website.startsWith('http')
-                  ? cinema.website
-                  : `https://${cinema.website}`;
-                Linking.openURL(url).catch((err) =>
-                  console.error("Failed to open URL:", err)
-                );
-              }}>{cinema.website}</Text>
+
+              <Text style={styles.cinema_info_text}>{cinema["address\t"]}, {cinema.city}</Text>
+              <Text style={styles.cinema_phone_number} onPress={() => call_contact(cinema.phone)}>{cinema.phone}</Text>
+              <Text style={styles.cinema_website} onPress={() => { clickable_website }}>{cinema.website}</Text>
             </View>
           </View>
           <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
