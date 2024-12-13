@@ -45,7 +45,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
             <View style={styles.contact_text_container}>
               <Text style={styles.contact_text_name}>{cinema.name}</Text>
               <Text style={styles.contact_text}>{cinema.description}</Text>
-              <Text style={styles.contact_text}>{cinema["address\t"]}</Text>
+              <Text style={styles.contact_text}>{cinema["address\t"]}, {cinema.city}</Text>
               <Text style={styles.contact_text}>{cinema.phone}</Text>
               <Text onPress={() => {
                 let url = cinema.website.startsWith('http')
