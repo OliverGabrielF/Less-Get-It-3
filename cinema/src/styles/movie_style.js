@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     marginHorizontal: '1%',
   },*/
   pressable: {
+    marginTop: '1%',
     flexBasis: '40%',
     maxWidth: 400,
     alignItems: 'center',
@@ -22,8 +23,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   container: {
-    height: 200,
-    width: '100%', 
+    height: 250,
+    width: '100%',
     backgroundColor: '#DAE2DF',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -63,6 +64,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 2,
   },
+  genre: {
+    // marginTop: 2,
+    fontSize: 14,
+    color: '#555555',
+    textAlign: 'center',
+  }
 });
 
 export default styles;
