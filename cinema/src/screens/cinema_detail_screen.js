@@ -3,6 +3,7 @@ import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchCinemas } from '../actions/cinemasActions.js';
+import Movie from '../components/movie.js';
 import styles from '../styles/cinema_detail_style.js';
 
 export default function CinemaDetailScreen({ navigation, route }) {
@@ -10,6 +11,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
   const { cinemaId } = route.params;
   const dispatch = useDispatch();
   const { cinemas } = useSelector((state) => state.cinemas);
+  const { movies } = useSelector((state) => state.movies);
   const { token } = useSelector((state) => state.authentication);
 
   useEffect(() => {
@@ -19,6 +21,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
   }, [token, dispatch]);
 
   const cinema = cinemas.find((c) => c.id === cinemaId);
+  const movies_for_cinema = movies.filter((movie) => movie.cinemaId === cinemaId);
 
   return (
     <View style={styles.container}>
@@ -42,7 +45,17 @@ export default function CinemaDetailScreen({ navigation, route }) {
           </View>
           <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
           <View style={styles.movies_shown_container}>
-            <Text>Hello</Text>
+            {movies_for_cinema.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                name={movie.name}
+                year={movie.year}
+                genres={movie.genres}
+                description={movie.description}
+                navigation={navigation}
+              />
+            ))}
           </View>
         </View>
       </ScrollView>
