@@ -6,6 +6,8 @@ import { fetchMovies } from '../actions/moviesActions.js';
 import { fetchUpcoming } from '../actions/upcomingActions.js';
 import styles from '../styles/movie_screen_style.js';
 
+import Header from '../components/header.js';
+
 export default function MovieScreen({ navigation, route }) {
 
   const { movieId } = route.params;
@@ -30,13 +32,7 @@ export default function MovieScreen({ navigation, route }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.back_home} onPress={() => navigation.goBack("Home")}>
-          <Text style={styles.buttonTxt}>{"< BACK"}</Text>
-        </TouchableOpacity>
-        <Text style={styles.header_text}>Dr. Cinema</Text>
-      </View>
-
+      <Header navigation={navigation}/>
       <View style={styles.movie_info_container}>
         <Text>{movie.title}</Text>
       </View>

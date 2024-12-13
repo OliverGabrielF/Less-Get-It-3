@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Upcoming from '../components/upcoming.js';
 import { fetchUpcoming } from '../actions/upcomingActions.js';
 import styles from '../styles/upcoming_movies_style.js'; // Style imported from the style sheet
+import Header from '../components/header.js';
 
 export default function UpcomingMoviesScreen({ navigation }) {
   const dispatch = useDispatch();
@@ -22,12 +23,7 @@ export default function UpcomingMoviesScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <Text style={styles.buttonText}>{"< BACK"}</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerText}>Upcoming Movies</Text>
-      </View>
+      <Header navigation={navigation}/>
 
       {upcoming.length > 0 && (
 

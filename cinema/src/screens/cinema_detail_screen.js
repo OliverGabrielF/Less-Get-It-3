@@ -6,6 +6,7 @@ import { fetchCinemas } from '../actions/cinemasActions.js';
 import { fetchMovies } from '../actions/moviesActions.js';
 import Movie from '../components/movie.js';
 import styles from '../styles/cinema_detail_style.js';
+import Header from '../components/header.js';
 
 export default function CinemaDetailScreen({ navigation, route }) {
 
@@ -32,12 +33,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.back_home} onPress={() => navigation.goBack("Home")}>
-          <Text style={styles.buttonTxt}>{"< BACK"}</Text>
-        </TouchableOpacity>
-        <Text style={styles.header_text}>Dr. Cinema</Text>
-      </View>
+      <Header navigation={navigation}/>
 
       <ScrollView style={styles.scrollview}>
         <View style={styles.scrollview_container}>

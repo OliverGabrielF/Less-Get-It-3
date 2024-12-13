@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 13,
   },
-  buttonTxt: {
+  button_text: {
     alignText: 'center',
     color: 'black',
     fontWeight: 'bold'
