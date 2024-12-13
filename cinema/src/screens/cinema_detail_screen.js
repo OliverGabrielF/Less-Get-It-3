@@ -3,6 +3,7 @@ import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchCinemas } from '../actions/cinemasActions.js';
+import { fetchMovies} from '../actions/moviesActions.js';
 import Movie from '../components/movie.js';
 import styles from '../styles/cinema_detail_style.js';
 
@@ -17,11 +18,19 @@ export default function CinemaDetailScreen({ navigation, route }) {
   useEffect(() => {
     if (token) {
       dispatch(fetchCinemas());
+      dispatch(fetchMovies());
     }
   }, [token, dispatch]);
 
   const cinema = cinemas.find((c) => c.id === cinemaId);
-  const movies_for_cinema = movies.filter((movie) => movie.cinemaId === cinemaId);
+
+  // Array of all movies which are shown in a specific cinema
+  const movies_for_cinema = movies.filter(movie =>
+    movie.showtimes &&
+    movie.showtimes.some(showtime => showtime.cinema.id === cinemaId)
+  );
+
+  console.log(movies_for_cinema);
 
   return (
     <View style={styles.container}>
@@ -44,19 +53,26 @@ export default function CinemaDetailScreen({ navigation, route }) {
             </View>
           </View>
           <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
-          <View style={styles.movies_shown_container}>
-            {movies_for_cinema.map((movie) => (
-              <Movie
-                key={movie.id}
-                id={movie.id}
-                name={movie.name}
-                year={movie.year}
-                genres={movie.genres}
-                description={movie.description}
-                navigation={navigation}
-              />
-            ))}
-          </View>
+          
+          {movies_for_cinema.length > 0 && (
+
+          <ScrollView horizontal style={styles.horizontal_scrollview}>
+            <View style={styles.movies_shown_container}>
+              {movies_for_cinema.map((movie) => (
+                  <Movie
+                    key={movie.id}
+                    id={movie.id}
+                    name={movie.title}
+                    thumbnail={movie.poster}
+                    releaseDate={movie.year}
+                    genres={movie.genres}
+                    description={movie.description}
+                    navigation={navigation}
+                  />
+                ))}
+            </View>
+          </ScrollView>
+          )}
         </View>
       </ScrollView>
     </View>

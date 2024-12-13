@@ -89,24 +89,33 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     marginLeft: 10,
   },
-  // movies_shown_container: {
-  //   backgroundColor: 'white',
-  //   width: '40%',
-  //   height: '20%',
-  //   borderRadius: '10%',
-  //   marginTop: '3%',
-  //   marginLeft: '4%',
-  //   // marginBottom: '40%',
-  //   // paddingBottom: '30%'
-  // },
+  movies_shown_container: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: 'blue',
+    alignSelf: 'center',
+  },
+  movies_shown_container: {
+    flexDirection: 'row',
+    flexWrap: 'nowrap', 
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingHorizontal: 10,
+    overflow: 'hidden',
+  },
   scrollview: {
     flex: 1,
     width: '100%',
   },
   scrollview_container: {
     paddingBottom: 70,
-    marginBottom: '60%'
-  }
+    marginBottom: '30%'
+  },
+  horizontal_scrollview: {
+    flex: 1,
+    flexDirection: 'row',
+    width: '100%',
+  },
 })
 
 export default styles;

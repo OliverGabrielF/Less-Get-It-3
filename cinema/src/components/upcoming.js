@@ -7,6 +7,8 @@ const Upcoming = ({ navigation, id, name, thumbnail, releaseDate }) => {
   return (
     <Pressable 
       style={styles.pressable} 
+      // Spurning hvort þessi eigi að navigate á movies eða 
+      // specific upcoming skjá...
       onPress = {() => navigation.navigate("Movie", { movieId: id })}
     >
       <View style={styles.container}>
