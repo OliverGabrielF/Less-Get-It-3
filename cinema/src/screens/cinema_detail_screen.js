@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchCinemas } from '../actions/cinemasActions.js';
-import { fetchMovies} from '../actions/moviesActions.js';
+import { fetchMovies } from '../actions/moviesActions.js';
 import Movie from '../components/movie.js';
 import styles from '../styles/cinema_detail_style.js';
 
@@ -47,16 +47,23 @@ export default function CinemaDetailScreen({ navigation, route }) {
               <Text style={styles.contact_text}>{cinema.description}</Text>
               <Text style={styles.contact_text}>{cinema["address\t"]}</Text>
               <Text style={styles.contact_text}>{cinema.phone}</Text>
-              <Text style={styles.contact_text}>{cinema.website}</Text>
+              <Text onPress={() => {
+                let url = cinema.website.startsWith('http')
+                  ? cinema.website
+                  : `https://${cinema.website}`;
+                Linking.openURL(url).catch((err) =>
+                  console.error("Failed to open URL:", err)
+                );
+              }}>{cinema.website}</Text>
             </View>
           </View>
           <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
-          
+
           {movies_for_cinema.length > 0 && (
 
-          <ScrollView horizontal style={styles.horizontal_scrollview}>
-            <View style={styles.movies_shown_container}>
-              {movies_for_cinema.map((movie) => (
+            <ScrollView horizontal style={styles.horizontal_scrollview}>
+              <View style={styles.movies_shown_container}>
+                {movies_for_cinema.map((movie) => (
                   <Movie
                     key={movie.id}
                     id={movie.id}
@@ -68,8 +75,8 @@ export default function CinemaDetailScreen({ navigation, route }) {
                     navigation={navigation}
                   />
                 ))}
-            </View>
-          </ScrollView>
+              </View>
+            </ScrollView>
           )}
         </View>
       </ScrollView>
