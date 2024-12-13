@@ -89,16 +89,16 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     marginLeft: 10,
   },
-  movies_shown_container: {
-    backgroundColor: 'white',
-    width: '40%',
-    height: '20%',
-    borderRadius: '10%',
-    marginTop: '3%',
-    marginLeft: '4%',
-    // marginBottom: '40%',
-    // paddingBottom: '30%'
-  },
+  // movies_shown_container: {
+  //   backgroundColor: 'white',
+  //   width: '40%',
+  //   height: '20%',
+  //   borderRadius: '10%',
+  //   marginTop: '3%',
+  //   marginLeft: '4%',
+  //   // marginBottom: '40%',
+  //   // paddingBottom: '30%'
+  // },
   scrollview: {
     flex: 1,
     width: '100%',
