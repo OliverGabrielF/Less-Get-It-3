@@ -1,16 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  /*pressable: {
-    flex: 1,
-    flexBasis: '80%',
-    maxWidth: '80%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'hidden',
-    marginBottom: 20,
-    marginHorizontal: '1%',
-  },*/
   pressable: {
     marginTop: '1%',
     flexBasis: '40%',
