@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { Linking, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, ScrollView, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchCinemas } from '../actions/cinemasActions.js';
 import { fetchMovies } from '../actions/moviesActions.js';
+import Header from '../components/header.js';
 import Movie from '../components/movie.js';
 import styles from '../styles/cinema_detail_style.js';
-import Header from '../components/header.js';
 
 export default function CinemaDetailScreen({ navigation, route }) {
 
@@ -31,16 +31,31 @@ export default function CinemaDetailScreen({ navigation, route }) {
     movie.showtimes.some(showtime => showtime.cinema.id === cinemaId)
   );
 
+  // Function to strip the description of HTML tags in description of the API
+  function stripHtmlTags(text) {
+    if (!text) return '*No description found';
+    return text.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+  }
+
   return (
     <View style={styles.container}>
-      <Header navigation={navigation}/>
+      <Header navigation={navigation} />
 
       <ScrollView style={styles.scrollview}>
         <View style={styles.scrollview_container}>
           <View style={styles.contact_info_container}>
             <View style={styles.contact_text_container}>
               <Text style={styles.contact_text_name}>{cinema.name}</Text>
-              <Text style={styles.contact_text}>{cinema.description}</Text>
+              <Text style={styles.contact_text}>
+                {stripHtmlTags(cinema.description)
+                  .split('\n')
+                  .map((line, index) => (
+                    <Text key={index} style={styles.contact_text}>
+                      {line.trim()}
+                      {index < stripHtmlTags(cinema.description).split('\n').length - 1 && '\n'}
+                    </Text>
+                  ))}
+              </Text>
               <Text style={styles.contact_text}>{cinema["address\t"]}, {cinema.city}</Text>
               <Text style={styles.contact_text}>{cinema.phone}</Text>
               <Text onPress={() => {
