@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#DAE2DF',
   },
   flex_row_container: {
-    flex: 1,
+    height: '35%',
     flexDirection: 'row',
   },
   poster_container: {
@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     aspectRatio: 3/4,
     borderRadius: 10,
   },
+
   movie_details_container: {
     width: '50%',
     padding: 10,
-    backgroundColor: 'blue',
   },
   movie_name: {
     fontSize: 20,
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 20,
   },
+
   detail_duration_row: {
     flexDirection: 'row',
     marginBottom: 5,
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     fontSize: 14,
   },
+
   detail_year_row: {
     flexDirection: 'row',
     marginBottom: 5,
@@ -66,6 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     fontSize: 14,
   },
+
   genre_container: {
     flexWrap: 'wrap',
     flexDirection: 'row',
@@ -80,6 +83,28 @@ const styles = StyleSheet.create({
   genre_text: {
     fontSize: 14,
     marginRight: 3,
+  },
+
+  description_container: {
+    marginBottom: 20,
+  },
+  description_title: {
+    fontWeight: 'bold',
+  },
+
+  showtime_container: {
+    marginTop: 10,
+    flexDirection: 'row',
+  },
+  showtime_title: {
+    fontWeight: 'bold',
+  },
+  purchase_button: {
+    padding: 10,
+    marginRight: 10,
+    borderRadius: 20,
+    borderWidth: 1.5,
+    borderColor: '#454B66',
   },
 })
 
