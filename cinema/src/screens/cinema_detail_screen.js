@@ -73,6 +73,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
                     genres={movie.genres}
                     description={movie.description}
                     navigation={navigation}
+                    cinemaId={cinemaId}
                   />
                 ))}
               </View>

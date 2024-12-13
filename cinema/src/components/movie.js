@@ -2,14 +2,14 @@ import React from 'react';
 import { Image, Pressable, Text, View } from 'react-native';
 import styles from '../styles/movie_style.js';
 
-const Movie = ({ navigation, id, name, thumbnail, releaseDate, genres, description }) => {
+const Movie = ({ navigation, id, name, thumbnail, releaseDate, genres, description, cinemaId }) => {
 
   const genre_names = genres.map((genre) => genre.Name).join(", ");
 
   return (
     <Pressable
       style={styles.pressable}
-      onPress={() => navigation.navigate("Movie", { movieId: id })}
+      onPress={() => navigation.navigate("Movie", { cinemaId: cinemaId, movieId: id })}
     >
       <View style={styles.container}>
         <View style={styles.thumbnail_container}>

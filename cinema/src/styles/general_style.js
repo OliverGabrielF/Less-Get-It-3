@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 20,
     borderRadius: 10,
+    marginBottom: 10,
   },
   upcoming_button_text: {
     width: 200,
