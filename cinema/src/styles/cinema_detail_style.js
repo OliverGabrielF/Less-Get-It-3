@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   cinema_container: {
     marginTop: 20,
     width: '95%',
-    backgroundColor: 'white',
+    backgroundColor: '#DAE2DF',
     borderRadius: 10,
     padding: 15,
     flexDirection: 'column',
@@ -34,9 +34,9 @@ const styles = StyleSheet.create({
   cinema_info_text: {
     fontSize: 14,
     fontWeight: 'bold',
-    width: '90%',
+    width: '95%',
     borderBottomWidth: 1,
-    borderBottomColor: '#DAE2DF',
+    borderBottomColor: '#BEC5C2',
     textAlign: 'left',
     marginTop: 10,
     paddingTop: 2,
@@ -48,15 +48,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignContent: 'center',
     marginLeft: '3%',
-    width: '90%',
-    borderBottomColor: '#DAE2DF',
+    width: '95%',
+    borderBottomColor: '#BEC5C2',
   },
   cinema_website: {
     fontSize: 14,
     fontWeight: 'bold',
-    width: '90%',
+    width: '95%',
     borderBottomWidth: 1,
-    borderBottomColor: '#DAE2DF',
+    borderBottomColor: '#BEC5C2',
     textAlign: 'left',
     marginTop: 10,
     color: 'blue'
@@ -64,9 +64,9 @@ const styles = StyleSheet.create({
   cinema_phone_number: {
     ontSize: 14,
     fontWeight: 'bold',
-    width: '90%',
+    width: '95%',
     borderBottomWidth: 1,
-    borderBottomColor: '#DAE2DF',
+    borderBottomColor: '#BEC5C2',
     textAlign: 'left',
     marginTop: 10,
     color: 'blue'

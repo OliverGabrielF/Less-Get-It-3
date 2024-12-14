@@ -31,7 +31,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
     movie.showtimes.some(showtime => showtime.cinema.id === cinemaId)
   );
 
-  // Function to strip the description of HTML tags in description of the API for cinemas
+  // Function to strip HTML tags in description of the API for cinemas
   function strip_html_tags(text) {
     if (!text) return '*Engin lýsing';
     return text.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
@@ -78,10 +78,10 @@ export default function CinemaDetailScreen({ navigation, route }) {
 
               <Text style={styles.cinema_info_text}>{cinema["address\t"]}, {cinema.city}</Text>
               <Text style={styles.cinema_phone_number} onPress={() => call_contact(cinema.phone)}>{cinema.phone}</Text>
-              <Text style={styles.cinema_website} onPress={() => { clickable_website }}>{cinema.website}</Text>
+              <Text style={styles.cinema_website} onPress={clickable_website}>{cinema.website}</Text>
             </View>
           </View>
-          <Text style={styles.movies_shown_text}>Movies shown in {cinema.name}</Text>
+          <Text style={styles.movies_shown_text}>Kvikmyndir í {cinema.name}</Text>
 
           {movies_for_cinema.length > 0 && (
 
