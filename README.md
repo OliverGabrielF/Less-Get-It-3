@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Þarf að bæta inn í þetta!!!
+Þetta verkefni fjallar um dr.cinema sem er að bua til app fyrir biomyndir og væntanlegar biomyndir, þú þarft að registera api access hjá api.kvikmyndir.is til að geta skráð þig inn almennilega og geta skoðað allt appið okkar 
 ---
 
 ## Installation and Setup
