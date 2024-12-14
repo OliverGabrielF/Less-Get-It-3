@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   poster: {
     resizeMode: 'cover',
-    aspectRatio: 3/4,
+    aspectRatio: 3 / 4,
     borderRadius: 10,
   },
 
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   detail_year_title: {
     fontWeight: 'bold',
-    width: 70,
+    width: 76,
     fontSize: 14,
   },
   detail_year_info: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   genre_title: {
     fontSize: 14,
     fontWeight: 'bold',
-    width: 52,
+    width: 58,
     marginRight: 3,
   },
   genre_text: {
