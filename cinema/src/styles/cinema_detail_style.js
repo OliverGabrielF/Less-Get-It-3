@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   cinema_info_text: {
     fontSize: 14,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     width: '95%',
     borderBottomWidth: 1,
     borderBottomColor: '#BEC5C2',
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   cinema_website: {
     fontSize: 14,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     width: '95%',
     borderBottomWidth: 1,
     borderBottomColor: '#BEC5C2',
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   cinema_phone_number: {
     ontSize: 14,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     width: '95%',
     borderBottomWidth: 1,
     borderBottomColor: '#BEC5C2',
