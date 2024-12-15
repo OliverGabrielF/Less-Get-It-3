@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { Linking, ScrollView, Text, View } from 'react-native';
+import 'react-native-get-random-values';
 import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+
 
 import { fetchCinemas } from '../actions/cinemasActions.js';
 import { fetchMovies } from '../actions/moviesActions.js';
@@ -89,7 +92,7 @@ export default function CinemaDetailScreen({ navigation, route }) {
               <View style={styles.movies_shown_container}>
                 {movies_for_cinema.map((movie) => (
                   <Movie
-                    key={movie.id}
+                    key={`${movie.id}-${uuidv4()}`}
                     id={movie.id}
                     name={movie.title}
                     thumbnail={movie.poster}
